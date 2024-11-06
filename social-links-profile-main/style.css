@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  width: 100vw;
+  background: hsl(0, 0%, 8%);
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: hsl(0, 0%, 100%);
+}
+
+.social-card {
+  display: flex;
+  width: 380px;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  background: hsl(0, 0%, 12%);
+}
+
+.social-card_user-infor {
+}
+
+.user-infor_img {
+  margin-bottom: 25px;
+}
+.user-infor_img img {
+  width: 90px;
+  border-radius: 50%;
+}
+
+.user-infor_name {
+  margin-bottom: 15px;
+
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.user-infor_address {
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: hsl(75, 94%, 57%);
+}
+
+.user-infor_title {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.social-card_list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.social-card_list a {
+  display: inline;
+  width: 100%;
+  padding: 13px;
+  border-radius: 5px;
+  background: hsl(0, 0%, 20%);
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  font-size: 15px;
+  font-weight: 600;
+}
+.social-card_list a:hover{
+    color: hsl(0, 0%, 8%);
+    background: hsl(75, 94%, 57%);
+}
+
+@media only screen and (max-width: 380px){
+    .social-card {
+        width: 330px;
+        padding: 25px;
+    }
+}
