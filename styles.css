@@ -3,3 +3,26 @@
     padding: 0;
     margin: 0;
   }
+  
+  body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    gap:20px 
+  }
+
+.challenge-card{
+  width: 150px;
+}
+
+.challenge-card-img{
+  width: 100%;
+}
+
+.challenge-card-img img{
+  width: 100%;
+}
+.challenge-card-title{
+  
+}
+
