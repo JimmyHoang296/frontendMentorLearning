@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    
+    background: hsl(0, 0%, 98%);
+    
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-size: 0.935rem;
+    color: hsl(229, 6%, 66%);
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 375px;
+    padding: 85px 30px
+}
+
+.hero{
+    text-align: center;
+    max-width: 600px;
+
+}
+
+.hero-title{
+
+    font-size: 1.5rem;
+    font-weight: 200;
+    color:hsl(234, 12%, 34%);
+}
+
+.strong{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-text{
+    margin-bottom: 75px;
+
+}
+
+.card-container{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex: 1 1 1
+}
+.wrapper{
+    height: 100%;
+    display: inherit;
+    flex-direction: column;
+    gap:inherit;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 25px 30px;
+    border-radius: 10px;
+    background: white;
+    height: 100%;
+    max-width: 350px;
+    flex-grow: 1;
+    box-shadow: 5px 5px 20px hsl(229, 6%, 66%);
+}
+
+.red{
+    border-top: 3px solid hsl(0, 78%, 62%);
+
+}
+
+.cyan{
+    border-top: 3px solid hsl(180, 62%, 55%);
+    
+}
+
+.orange{
+    border-top: 3px solid hsl(34, 97%, 64%);
+    
+}
+
+.blue{
+    border-top: 3px solid hsl(212, 86%, 64%);
+
+}
+.card-title{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: hsl(234, 12%, 34%);
+}
+
+.card-text{
+    margin-bottom: 35px;
+    font-size: 0.8125rem;
+}
+
+.card-img{
+    width: 55px;
+    position: relative;
+    align-self: flex-end;
+}
+
+@media (min-width: 50rem){
+    main{
+        max-width: 1200px;
+    }
+
+    .hero{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-title{
+        font-size: 2rem;
+    }
+    .card-container{
+        padding: 30px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap:30px;
+    }
+
+
+
+    .card-title{
+        margin-bottom: 15px;
+    }
+    .card-text{
+        margin-bottom: 40px;
+    }
+    .card-img{
+        width: 65px;
+    }
+}
