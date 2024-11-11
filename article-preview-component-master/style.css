@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 75px;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.8125rem;
+  color: hsl(214, 17%, 51%);
+
+  background: hsl(210, 46%, 95%);
+}
+.preview {
+  margin-right: 25px;
+  margin-left: 25px;
+  min-width: 325px;
+  border-radius: 10px;
+  background: white;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  display: block;
+  /* width: 100%; */
+  min-height: 200px;
+  height: 20%;
+  margin-bottom: 15px;
+
+  background: url(./images/drawers.jpg) no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+.preview-body {
+  padding: 20px 34px;
+}
+
+.preview-header {
+  margin-bottom: 15px;
+
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.preview-content {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 30px;
+}
+
+.user {
+  display: grid;
+}
+
+.user-avatar {
+  grid-area: 1/1/3/2;
+  margin-right: 20px;
+  align-items: center;
+  width: 40px;
+  border-radius: 100%;
+}
+.user-name {
+  grid-area: 1/2/3/2;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.review-date {
+  grid-area: 2/2/3/2;
+  font-size: 0.8rem;
+}
+
+.media {
+  display: flex;
+  align-items: center;
+}
+
+.media p {
+  margin-right: 20px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  color: hsl(212, 23%, 69%);
+}
+
+.media-list {
+  display: flex;
+  gap: 15px;
+}
+
+#shareBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  background: hsl(210, 46%, 95%);
+  color: hsl(214, 17%, 51%);
+  cursor: pointer;
+}
+#shareBtn:hover{
+    opacity: 0.7;
+    animation: ease-in-out
+}
+
+.media {
+  display: none;
+}
+.share-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.share {
+  background: hsl(217, 19%, 35%);
+}
+
+.share .share-wrapper{
+    width: 100%;
+}
+
+.share .media {
+  display: flex;
+}
+
+.media-list a{
+    cursor: pointer;
+}
+
+.share #shareBtn {
+  color: white;
+  background: hsl(214, 17%, 51%);
+}
+.share .user {
+  display: none;
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  section {
+    padding-top: 0;
+    display: grid;
+    max-width: 730px;
+    grid-template-columns: 285px auto;
+    margin-bottom: 0;
+  }
+  .preview {
+    overflow: visible;
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+  .img-wrapper {
+    grid-area: 1/1/3/2;
+    background-position: left bottom;
+    height: auto;
+    background-size: cover;
+    margin-bottom: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .preview-body {
+    padding: 30px 40px 0px;
+  }
+
+  .preview-header {
+    font-size: 1.3rem;
+  }
+
+  .footer {
+    margin-bottom: 13px;
+    padding-right: 40px;
+    padding-left: 40px;
+    position: relative;
+  }
+  .share-wrapper {
+    justify-self: flex-end;
+    align-self: flex-end;
+    text-align: right;
+  }
+
+  .share {
+    background: inherit;
+  }
+  .share .media {
+    display: flex;
+    position: absolute;
+    top: -50px;
+    right: -65px;
+    background: hsl(217, 19%, 35%);
+    padding: 15px 30px;
+    border-radius: 10px;
+  }
+
+  .share .media::after {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Adjust position relative to box */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  }
+  .share .share-wrapper{
+    width: auto;
+}
+  .share #shareBtn {
+    color: white;
+    background: hsl(214, 17%, 51%);
+  }
+  .share .user {
+    display: grid;
+  }
+}
