@@ -9,12 +9,13 @@
     margin: auto;
     height: 100vh;
     width: 100vw;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap:20px 
   }
 
 .challenge-card{
-  width: 500px;
+  /* width: 500px; */
 }
 
 .challenge-card-img{

@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    min-height: 100vh;
+    background: hsl(145, 38%, 91%);
+    color:hsl(187, 24%, 22%);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    width: 100%;
+}
+
+#contactForm{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+
+    margin: 30px 17px; 
+    padding: 30px 25px;
+    background: white;
+    text-align: left;
+}
+
+
+.title{
+    margin-bottom: 35px;
+    color: hsl(194, 20%, 17%);
+}
+
+.input-container{
+    
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label, input {
+    color: hsl(187, 24%, 22%);
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.input-container label{
+    margin-bottom: 10px;
+}
+.star{
+    margin-left: 10px;
+    color: hsl(169, 82%, 27%);
+}
+
+.input-container input, .radio, textarea{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    border: 1px solid hsl(186, 15%, 59%);
+    display: block;
+
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+.input-container input:hover,.radio:hover, textarea:hover{
+    border-color: hsl(169, 82%, 27%);
+}
+
+input[type="radio"]{
+    display: none;    
+}
+label.radio{
+    display: flex;
+    margin-bottom: 15px;
+}
+/* label.radio:first-child{
+    margin-bottom: 15px;
+    
+} */
+
+.radio-button, .checked-button {
+    width: 21px;
+    height: 21px;
+    border: 2px solid #ccc;
+    border-radius: 50%; /* Makes it circular */
+    margin-left: 20px;
+    margin-right: 15px;
+    position: relative;
+    transition: border-color 0.3s ease;
+  }
+
+.radio-button img, .checked-button img{
+    display: none;
+    position: relative;
+    left: -2px ;
+    top:-2px
+}
+.selected{
+    background: hsl(148, 38%, 91%);
+}
+
+input[type="radio"]:checked + .radio-button img{
+    display: block;
+}
+input[type="checkbox"]:checked + .checked-button img{
+    display: block;
+}
+
+textarea{
+    height: 240px;
+    resize: none;
+    margin-bottom: 30px;
+}
+
+input[type="checkbox"]{
+    display: none;    
+}
+.checked-button{
+    display: inline-block;
+    border-radius: 0;
+    width: 19px;
+    height: 18px;
+    margin-left: 0;
+}
+label[for="consent"] {
+    display: flex;
+    align-items: center;
+}
+
+button{
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    color:hsl(0, 0%, 100%);
+    background: hsl(169, 82%, 27%);
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.9;
+}
+.errMsg{
+    display: none;
+    font-size: 0.8125rem;
+    color: red;
+}
+
+.err input{
+    border-color: red;
+}
+.err .errMsg{
+    display: unset;
+}
+
+.notify{
+    display: none;
+    padding: 20px 15px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 10px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: hsl(185, 24%, 22%);
+    color: white;
+}
+
+.notify-title{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 15px;
+    font-weight: 700;
+}
+.notify-content{
+    font-weight: 400;
+}
+
+@media (min-width: 40rem){
+    #contactForm{
+        max-width: 740px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+        padding: 40px;
+    }
+    
+    .input-container, button, .title{
+        grid-column: span 2;
+    }
+    .input-container:nth-child(3){
+        grid-column: span 1;
+    }
+    .input-container:nth-child(2){
+        grid-column: span 1;
+    }
+    .radio-list{
+        display: flex;
+        gap: 20px;
+    }
+    #message{
+        height: 105px;
+    }
+    .input-container{
+        margin-bottom: 10px;
+    }
+    .input-container input, .radio, textarea{
+        font-size: 1.1rem;
+    }
+    textarea{
+        line-height: 1.5;
+    }
+    button{
+        margin-top: 30px;
+        padding: 20px;
+        font-size: 1.1rem;
+    }
+}

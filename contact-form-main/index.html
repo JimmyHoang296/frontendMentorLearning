@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form id="contactForm">
+        <h1 class="title">Contact Us</h1>
+        <div class="input-container">
+          <label for="firstName">First Name<span class="star">*</span></label>
+          <input type="text" id="firstName" name="firstName" required />
+          <p class="errMsg">This field is required</p>
+        </div>
+        <div class="input-container">
+          <label for="lastName">Last Name<span class="star">*</span></label>
+          <input type="text" id="lastName" name="lastName" required />
+          <p class="errMsg">This field is required</p>
+        </div>
+        <div class="input-container">
+          <label for="email">Email Address<span class="star">*</span></label>
+          <input type="email" id="email" name="email" required />
+          <p class="errMsg">This field is required</p>
+        </div>
+        <div class="input-container">
+          <label>Query Type <span class="star">*</span></label>
+
+          <div class="radio-list">
+            <label class="radio">
+              <input type="radio" name="queryType" value="option1" />
+              <div class="radio-button">
+                <img src="./assets/images/icon-radio-selected.svg" alt="" />
+              </div>
+              General Enquiry
+            </label>
+
+            <label class="radio">
+              <input type="radio" name="queryType" value="option2" />
+              <div class="radio-button">
+                <img src="./assets/images/icon-radio-selected.svg" alt="" />
+              </div>
+              Support Request
+            </label>
+          </div>
+          <p class="errMsg">Please select a query type</p>
+        </div>
+        <div class="input-container">
+          <label for="message">Message<span class="star">*</span></label>
+          <textarea id="message" name="message" row="10" required></textarea>
+          <p class="errMsg">This field is required</p>
+        </div>
+        <div class="input-container">
+          <label for="consent">
+            <input
+              type="checkbox"
+              id="consent"
+              name="consent"
+              value="false"
+              required
+            />
+            <div class="checked-button">
+              <img src="./assets/images/icon-checkbox-check.svg" alt="" />
+            </div>
+            <p>
+              I consent to being contacted by the team<span class="star"
+                >*</span
+              >
+            </p>
+          </label>
+
+          <p class="errMsg">
+            To submit this form, please consent to being contacted
+          </p>
+        </div>
+        <button type="button" id="submitBtn">Submit</button>
+      </form>
+      <div class="notify">
+        <div class="notify-title">
+          <img src="./assets/images/icon-success-check.svg" alt="" /> Message
+          Sent!
+        </div>
+        <p class="notify-content">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
