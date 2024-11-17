@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: 30px 15px;
+
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: hsl(236, 13%, 42%);
+}
+
+.desktop {
+  display: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+/* header start */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 45px;
+}
+#menuBtn {
+  background: none;
+  position: fixed;
+  right: 20px;
+}
+
+#menuClose {
+  display: none;
+}
+
+.active #menuClose {
+  display: unset;
+  z-index: 99;
+}
+.active #menuOpen {
+  display: none;
+}
+
+.header .nav {
+  display: none;
+}
+
+.active .nav {
+  display: block;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: hsla(233, 8%, 79%, 60%);
+}
+
+.active .nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 150px;
+  padding-left: 20px;
+  position: fixed;
+  height: 100vh;
+  width: 70%;
+  background: white;
+  top: 0;
+  left: 35%;
+
+  color: hsl(240, 100%, 5%);
+  font-size: 1.2rem;
+}
+
+.nav-list a:hover{
+    color:hsl(5, 85%, 63%);
+}
+
+/* header end */
+
+/* main start */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 70px;
+}
+
+.main-content {
+  margin-bottom: 50px;
+}
+.hero-image {
+  margin-bottom: 20px;
+}
+.hero-image img {
+  width: 100%;
+}
+
+.hero {
+  margin-bottom: 20px;
+  font-size: 2.65rem;
+  font-weight: 800;
+  line-height: 1;
+  color: hsl(240, 100%, 5%);
+}
+
+.hero-text {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+#readMore {
+  margin-bottom: 20px;
+  padding: 15px 35px;
+  background: hsl(5, 85%, 63%);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+
+#readMore:hover {
+  background: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+}
+
+.sidebar {
+  padding: 30px 20px;
+  background: hsl(240, 100%, 5%);
+  color: hsl(233, 8%, 79%);
+}
+.sidebar-title {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: hsl(35, 77%, 62%);
+}
+.sidebar ul {
+  list-style-type: none;
+}
+.sidebar li:not(:last-child) {
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid hsla(36, 100%, 99%, 30%);
+}
+.sidebar a {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: hsl(36, 100%, 99%);
+}
+.sidebar a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.sidebar p {
+  font-weight: 200;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* main content end */
+
+/* bottom article start */
+.bottom-article {
+  margin-bottom: 65px;
+}
+article {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+article img {
+  width: 30%;
+}
+
+.article-infor span {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: hsl(5, 85%, 63%);
+  margin-bottom: 10px;
+}
+
+.article-infor a {
+  display: block;
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.article-infor a:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.article-infor p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (min-width: 40rem) {
+.desktop{
+    display: unset;
+}
+.mobile{
+    display: none;
+}
+  body {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1110px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  .header{
+    margin-bottom: 55px;
+  }
+  .header .nav {
+    display: block;
+  }
+  .header .nav-list{
+    display: flex;
+    gap: 40px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: row;
+    gap:30px
+  }
+  .main-article{
+    max-width: 735px;
+  }
+  .main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 0;
+  }
+
+  .hero-image{
+    margin-bottom: 35px;
+  }
+  .hero{
+    grid-row: span 2;
+    padding-right: 40px;
+    font-size: 3.5rem;
+  }
+  .hero-text{
+    font-size: 1rem;
+  }
+  #readMore{
+    display: inline-block;
+    max-width: 220px;
+    padding: 15px;
+    margin-bottom: 0;
+  }
+  .sidebar{
+    padding: 30px 20px;
+  }
+  .sidebar-title{
+    font-size: 2.5rem;
+  }
+  .sidebar ul{
+    padding-bottom: 0;
+  }
+
+  .bottom-article{
+    display: flex;
+    gap: 40px;
+  }
+}
